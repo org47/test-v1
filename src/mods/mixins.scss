@@ -1,0 +1,10 @@
+@mixin width-height ($width, $height) {
+  width: $width/2;
+  height: $height/2;
+}
+
+@mixin centered-box () {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}

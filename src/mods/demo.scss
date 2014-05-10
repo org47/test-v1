@@ -1,0 +1,39 @@
+@import "mixins";
+
+.grid-padding {
+  padding: 10px;
+}
+.mod-header {
+  .grid-padding,
+  .align-start,
+  .align-end {
+    display: -webkit-box;
+  }
+  .align-start,
+  .align-end {
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+  }
+  .align-start {
+    -webkit-box-flex: 193;
+    -webkit-box-pack: start;
+  }
+  .align-end {
+    -webkit-box-flex: 44;
+    -webkit-box-pack: end;
+  }
+  .logo {
+    @include width-height(193px, 35px);
+    background: url(./imgs/logo.png) no-repeat;
+  }
+  .shopping-cart {
+    @include width-height(44px, 44px);
+    background: url(./imgs/shopping-cart.png) no-repeat;
+    -webkit-box-pack: end;
+  }
+  .logo,
+  .shopping-cart {
+    display: inline-block;
+    background-size: 100%;
+  }
+}
